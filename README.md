@@ -5,7 +5,7 @@ Introduction: A public repository going to study how we can leverage LLMs as too
 #### Generative LLMs
 - [The most widely used tool is ChatGPT 3.5/4.0](https://chat.openai.com/)
 - [Llama3-8B (BF16)](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct)
-- [Octopus-v2]()
+- [Octopus-v2](https://github.com/dixiyao/LLM-Academic-Writing/blob/main/GenerativeLLM/octopus.py)
 
 #### Documentation Reading
 - [Scispace](https://typeset.io/)
