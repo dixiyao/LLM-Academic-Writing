@@ -38,6 +38,7 @@ Useful prompts
     url={\url{https://github.com/dixiyao/LLM-Academic-Writing}},
 }
 ```
+*LICENSE*: We are using the Apache 2.0 rather than MIT LICENSE.
 
 # Collaboration
 Contribution and collaboration are welcomed. Any tiny improvement via pull requests and collaboration will be appreciated.
