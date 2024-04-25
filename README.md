@@ -21,7 +21,9 @@ Introduction: A public repository going to study how we can leverage LLMs as too
 ### GPT Reviewer
 - [GPT4Reviewer](https://github.com/dixiyao/LLM-Academic-Writing/blob/main/GPTReviewer) is a featured tool developed in this repository. It can generate reviews by GPT-4 according to the paper and a given review template.
 ### Prompt Engineering
-Useful prompts
+The suggestion of prompt engineering by OpenAI: [link](https://platform.openai.com/docs/guides/prompt-engineering/six-strategies-for-getting-better-results).
+
+Some helpful prompts in revising academic papers.
 - "Check the grammar, make my language more professional and sound like native speakers."
 ### Frameworks to Run LLMs locally
 
