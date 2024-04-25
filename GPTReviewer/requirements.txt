@@ -1,0 +1,4 @@
+gradio
+openai
+tiktoken
+pdf2image

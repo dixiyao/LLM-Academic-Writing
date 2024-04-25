@@ -1,5 +1,11 @@
 # LLM-Academic-Writing
-Introduction: A public repository going to study how we can leverage LLMs as tools to improve our academic writing.
+Introduction: A public repository going to study how we can leverage LLMs as tools to improve our academic writing. We develop several helpful tools to help improve academic writing.
+
+[![My Skills](https://skillicons.dev/icons?i=rocket)](https://skillicons.dev) 
+
+**Featured tools.**
+- [GPT4Reviewer](https://github.com/dixiyao/LLM-Academic-Writing/blob/main/GPTReviewer). A useful tool using GPT4 to generate reviews of the paper.
+
 
 ## Choice of LLMs
 #### Generative LLMs
@@ -12,6 +18,7 @@ Introduction: A public repository going to study how we can leverage LLMs as too
 - [LayoutLM ](https://huggingface.co/impira/layoutlm-document-qa)
 
 ## Tools
+### GPT Reviewer
 ### Prompt Engineering
 Useful prompts
 - "Check the grammar, make my language more professional and sound like native speakers."
