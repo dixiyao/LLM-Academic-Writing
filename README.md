@@ -1,5 +1,5 @@
 # LLM-Academic-Writing
-Introduction: A public repository going to study how we can leverage LLMs as tools to improve our academic writing. We develop several helpful tools to help improve academic writing.
+Introduction: A public repository going to study how we can leverage LLMs as tools to improve our academic writing. In this repository, we collect useful resources and develop some tools leveraging LLMs to help improve academic writing.
 
 [![My Skills](https://skillicons.dev/icons?i=rocket)](https://skillicons.dev) 
 
