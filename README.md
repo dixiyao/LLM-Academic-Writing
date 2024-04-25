@@ -19,6 +19,7 @@ Introduction: A public repository going to study how we can leverage LLMs as too
 
 ## Tools
 ### GPT Reviewer
+- [GPT4Reviewer](https://github.com/dixiyao/LLM-Academic-Writing/blob/main/GPTReviewer) is a featured tool developed in this repository. It can generate reviews by GPT-4 according to the paper and a given review template.
 ### Prompt Engineering
 Useful prompts
 - "Check the grammar, make my language more professional and sound like native speakers."
@@ -27,4 +28,16 @@ Useful prompts
 ## Some Interesting Study
 - [An assignment to use LLMs to revise essays.](https://wac.colostate.edu/repository/collections/textgened/rhetorical-engagements/using-llms-as-peer-reviewers-for-revising-essays/)
 - [Have a try of using LLM to review paper.](https://github.com/Weixin-Liang/LLM-scientific-feedback) Maybe you can compare the reviews with the ones you received from peer-reviewed venues?
-- [ReviewerGPT?](https://arxiv.org/pdf/2306.00622.pdf)_
+- [ReviewerGPT?](https://arxiv.org/pdf/2306.00622.pdf)
+
+## Citation
+```
+@misc{
+    author={Dixi Yao},
+    title={{LLM}s for academic writing},
+    url={\url{https://github.com/dixiyao/LLM-Academic-Writing}},
+}
+```
+
+# Collaboration
+Contribution and collaboration are welcomed. Any tiny improvement via pull requests and collaboration will be appreciated.
