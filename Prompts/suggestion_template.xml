@@ -1,0 +1,15 @@
+<root>
+    <conference-title>
+        A conference in the field of security and privacy.
+    </conference-title>
+    <review-template>
+        Start by "Review outline:".
+        And then:
+        "Give some possible reasons to reject this paper".
+        "Give some furture directions to improve this paper".
+        "Do you think the paper is self-contained? Why or why not?"
+        "Do you think the paper is well-written? Why or why not?"
+        "Do you think the paper is novel? Why or why not?"
+        "Do you have any suggestion for the paper? In which direction can it be improved."
+    </review-template>
+</root>

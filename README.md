@@ -1,15 +1,15 @@
 # LLM-Academic-Writing
-Introduction: A public repository going to study how we can leverage LLMs as tools to improve our academic writing. In this repository, we collect useful resources and develop some tools leveraging LLMs to help improve academic writing.
+This public repository studies how we can leverage Large Language Models (LLMs) as tools to enhance academic writing. We collect useful resources and develop tools that utilize LLMs to improve academic writing skills.
 
 [![My Skills](https://skillicons.dev/icons?i=rocket)](https://skillicons.dev) 
 
 **Featured tools.**
-- [GPT4Reviewer](https://github.com/dixiyao/LLM-Academic-Writing/blob/main/GPTReviewer). A useful tool using GPT4 to generate reviews of the paper.
-
+- [GPT4Reviewer](https://github.com/dixiyao/LLM-Academic-Writing/blob/main/GPTReviewer). A practical tool that uses GPT-4 to generate paper reviews. You can also use GPT4 Reviewer to receive suggestions for improving your paper based on a structured review template. Modify the [suggestion template](https://github.com/dixiyao/LLM-Academic-Writing/blob/main/Prompts/suggestion_template.yml) to tailor it to your needs.
+- [GrammarCheck](https://github.com/dixiyao/LLM-Academic-Writing/blob/main/GPTReviewer). We can also use the reviewer tool to check the grammar and usage of English. Typically, it is better to use tools such as [Writer](writer.com) or Grammarly to check the spelling and grammar of the paper. However, we can also leverage GPT to ensure that the usage of English is correct. This is very helpful for non-native speakers.
 
 ## Choice of LLMs
 #### Generative LLMs
-- [The most widely used tool is ChatGPT 3.5/4.0](https://chat.openai.com/)
+- [ChatGPT 3.5/4.0](https://chat.openai.com/)-the most widely used tool
 - [Llama3-8B (BF16)](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct)
 - [Octopus-v2](https://github.com/dixiyao/LLM-Academic-Writing/blob/main/GenerativeLLM/octopus.py)
 
@@ -19,17 +19,20 @@ Introduction: A public repository going to study how we can leverage LLMs as too
 
 ## Tools
 ### GPT Reviewer
-- [GPT4Reviewer](https://github.com/dixiyao/LLM-Academic-Writing/blob/main/GPTReviewer) is a featured tool developed in this repository. It can generate reviews by GPT-4 according to the paper and a given review template.
+- [GPT4Reviewer](https://github.com/dixiyao/LLM-Academic-Writing/blob/main/GPTReviewer) Featured tool that generates reviews using GPT-4, based on the paper and a provided review template.
+- [GrammarChecker](https://github.com/dixiyao/LLM-Academic-Writing/blob/main/GPTReviewer).
 ### Prompt Engineering
-The suggestion of prompt engineering by OpenAI: [link](https://platform.openai.com/docs/guides/prompt-engineering/six-strategies-for-getting-better-results).
+Suggestions on prompt engineering from OpenAI: [link](https://platform.openai.com/docs/guides/prompt-engineering/six-strategies-for-getting-better-results).
 
-Some helpful prompts in revising academic papers.
-- "Check the grammar, make my language more professional and sound like native speakers."
+There is also a template for using our developed tools to generate suggestions for your paper: [suggestion template](https://github.com/dixiyao/LLM-Academic-Writing/blob/main/Prompts/suggestion_template.yml)
+
+Helpful prompts for revising academic papers include:
+- "Check the grammar, make my language more professional, and sound like a native speaker."
 ### Frameworks to Run LLMs locally
 
 ## Some Interesting Study
-- [An assignment to use LLMs to revise essays.](https://wac.colostate.edu/repository/collections/textgened/rhetorical-engagements/using-llms-as-peer-reviewers-for-revising-essays/)
-- [Have a try of using LLM to review paper.](https://github.com/Weixin-Liang/LLM-scientific-feedback) Maybe you can compare the reviews with the ones you received from peer-reviewed venues?
+- [An assignment using LLMs to revise essays.](https://wac.colostate.edu/repository/collections/textgened/rhetorical-engagements/using-llms-as-peer-reviewers-for-revising-essays/)
+- [Experiment with using LLMs to review papers.](https://github.com/Weixin-Liang/LLM-scientific-feedback) You might compare the reviews with those from peer-reviewed venues.
 - [ReviewerGPT?](https://arxiv.org/pdf/2306.00622.pdf)
 
 ## Citation
@@ -40,7 +43,7 @@ Some helpful prompts in revising academic papers.
     url={\url{https://github.com/dixiyao/LLM-Academic-Writing}},
 }
 ```
-*LICENSE*: We are using the Apache 2.0 rather than MIT LICENSE.
+*LICENSE*: We use the Apache 2.0 license instead of the MIT License.
 
 # Collaboration
-Contribution and collaboration are welcomed. Any tiny improvement via pull requests and collaboration will be appreciated.
+Contributions and collaborations are welcome. Any improvements made via pull requests and collaborations will be appreciated.

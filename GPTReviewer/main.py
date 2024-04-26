@@ -23,7 +23,7 @@ def get_review_template(root):
     else:
         return "Review Template"  # not found
 
-class ConferenceGPT4Wrapper:
+class ConferenceGPTWrapper:
     def __init__(self, openaikey,review_template,model_name="gpt-4-turbo",) -> None:
         self.model_name = model_name
         self.tokenizer = tiktoken.encoding_for_model(self.model_name)
@@ -80,11 +80,36 @@ def truncate(input_text: str, max_tokens: int, wrapper) -> str:
         truncated_text += "\n```"
     return truncated_text
 
+def process_grammar_check(latex_file,openaikey,use_gpt4):
+    openai.api_key = openaikey
+    if use_gpt4:
+        model_name="gpt-4-turbo"
+    else:
+        model_name="gpt-3.5-turbo"
+    paper=latex_file.decode("utf-8")
+    query_args = {
+            "model": model_name,
+            "messages": [
+                {
+                    "role": "system",
+                    "content": "You are ChatGPT, a large language model trained by OpenAI. Answer as concisely as possible.",
+                },
+                {
+                    "role": "system",
+                    "content": "This is the latex file of an academic paper. Please check the grammar and do not change the meaning. Make sure the paper uses the English correctly. It should sound like a native speaker.",
+                },
+                {"role": "user", "content": f"This is the paper {paper  }"},
+            ],
+            "n": 1,
+        }
+    completion=openai.chat.completions.create(**query_args)
+    result = completion.choices[0].message.content
+    return result
 
-def process(paper,review_template,openaikey,images=None):
+def process_review(paper,review_template,openaikey,images=None):
     if review_template is None:
         return "Review template not uploaded. Please try again."
-    wrapper = ConferenceGPT4Wrapper(openaikey=openaikey ,model_name="gpt-4-turbo",review_template=review_template)
+    wrapper = ConferenceGPTWrapper(openaikey=openaikey ,model_name="gpt-4-turbo",review_template=review_template)
     paper=paper.decode("utf-8")
     title_start=paper.find("\\title{")+len("\\title{")
     title_end=title_start
@@ -144,14 +169,21 @@ def main():
                 openai_key=gr.Textbox(label="OpenAI Key")
                 with gr.Row():
                     gr.ClearButton([upload_component,upload_review_template,openai_key],"Clear")
-                    review_generate=gr.Button("Generate Review",)
+                    with gr.Column():
+                        with gr.Row():
+                            check_grammar=gr.Button("Check Grammar. You can choose options of GPT 4 and 3.5")
+                            use_gpt4=gr.Checkbox(label="Use GPT4")
+                        review_generate=gr.Button("Generate Review. You need GPT4")
 
             with gr.Column():
                 output_component_review = gr.Textbox(label="Review Generated. (It takes time to generate the review. Please be patient.)")
                 
 
             review_generate.click(
-                fn=process, inputs=[upload_component,upload_review_template,openai_key,upload_images], outputs=output_component_review
+                fn=process_review, inputs=[upload_component,upload_review_template,openai_key,upload_images], outputs=output_component_review
+            )
+            check_grammar.click(
+                fn=process_grammar_check, inputs=[upload_component,openai_key,use_gpt4], outputs=output_component_review
             )
     demo.launch(server_name="0.0.0.0", server_port=7799)
 
