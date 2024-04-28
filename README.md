@@ -10,8 +10,13 @@ This public repository studies how we can leverage Large Language Models (LLMs) 
 ## Choice of LLMs
 #### Generative LLMs
 - [ChatGPT 3.5/4.0](https://chat.openai.com/)-the most widely used tool
-- [Llama3-8B (BF16)](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct)
+- [Llama3-8B (BF16)](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct). Try it in the HuggingFace inference API.
 - [Octopus-v2](https://github.com/dixiyao/LLM-Academic-Writing/blob/main/GenerativeLLM/octopus.py)
+
+#### Fine-tuned/Trained on Academic Corpus
+- [GALACTICA](https://github.com/paperswithcode/galai) is a general-purpose scientific language model. You can refer to the link for detailed instructions. 
+- [BLOOM](https://huggingface.co/bigscience/bloom) is an autoregressive Large Language Model (LLM), trained to continue text from a prompt on vast amounts of text data using industrial-scale computational resources. Try it in the HuggingFace inference API.
+- [FlowGPT](https://flowgpt.com/p/scigpt-universal-scientific-thought-experiment)
 
 #### Documentation Reading
 - [Scispace](https://typeset.io/)
@@ -28,7 +33,13 @@ There is also a template for using our developed tools to generate suggestions f
 
 Helpful prompts for revising academic papers include:
 - "Check the grammar, make my language more professional, and sound like a native speaker."
-### Frameworks to Run LLMs locally
+- "Please summarize the paper by author(s) in one concise sentence. Then, list key insights and lessons learned from the paper. Next, generate 3-5 questions that you would like to ask the authors about their work. Finally, provide 3-5 suggestions for related topics or future research directions based on the content of the paper. If applicable, list at least 5 relevant references from the field of study of the paper. Here is the paper. If the last sentence provided is incomplete just ignore it for summarizing : "
+### IDE Extensions
+#### Chrome
+- [OverLeafCopilot](https://chromewebstore.google.com/detail/overleaf-copilot/eoadabdpninlhkkbhngoddfjianhlghb) is currently in the Chrome store. After installing the attachments, users can have academic writing with the help of GPTs. However, it is not a good idea to let LLM completely do the writing as it is highly possible that the directly generated words are of not much sense.
+- [SciGPT](https://chromewebstore.google.com/detail/scigpt%EF%BC%9A%E6%80%BB%E7%BB%93%E7%A7%91%E5%AD%A6%E8%AE%BA%E6%96%87/paahiifbajkfokamacmmaakejigmgoke) is another Chrome extension and leverage the GPT/OpenAI backend to help answer questions related to academic study. They design some special prompts to boost the Q&A.
+#### VsCode
+- [Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) and [Bito](https://marketplace.visualstudio.com/items?itemName=Bito.Bito) are two VsCode extensions. We can also use them to help write documents and papers.
 
 ## Some Interesting Study
 - [An assignment using LLMs to revise essays.](https://wac.colostate.edu/repository/collections/textgened/rhetorical-engagements/using-llms-as-peer-reviewers-for-revising-essays/)
