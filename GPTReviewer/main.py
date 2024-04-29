@@ -166,7 +166,7 @@ def main():
                     upload_component = gr.File(label="Upload Latex File (all in one)", type="binary")
                     upload_review_template=gr.File(label="Upload Review Template. (You can use the review templates from conferences)", type="binary")
                 upload_images=gr.File(label="Upload multiple images", file_count="multiple",file_types=["image","pdf"])
-                openai_key=gr.Textbox(label="OpenAI Key")
+                openai_key=gr.Textbox(label="OpenAI Key",type="password")
                 with gr.Row():
                     gr.ClearButton([upload_component,upload_review_template,openai_key],"Clear")
                     with gr.Column():
