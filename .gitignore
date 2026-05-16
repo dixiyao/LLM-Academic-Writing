@@ -1,2 +1,5 @@
 key.txt
 .DS_Store
+/AIReviewer/.next-dev
+/AIReviewer/data/debug-uploads
+/AIReviewer/data

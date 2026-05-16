@@ -1,0 +1,52 @@
+{
+  "name": "ai-reviewer",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "clean": "node -e \"const fs=require('node:fs');fs.rmSync('.next',{recursive:true,force:true});fs.rmSync('tsconfig.tsbuildinfo',{force:true})\"",
+    "build:clean": "npm run clean && next build",
+    "start": "next start -p 3000",
+    "lint": "eslint src e2e --ext .ts,.tsx",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "e2e": "playwright test"
+  },
+  "dependencies": {
+    "@google/genai": "2.0.0",
+    "@openrouter/sdk": "0.12.35",
+    "better-sqlite3": "12.9.0",
+    "clsx": "2.1.1",
+    "drizzle-orm": "0.45.2",
+    "lucide-react": "0.559.0",
+    "next": "15.5.15",
+    "pdfjs-dist": "4.4.168",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-pdf-highlighter-plus": "1.1.4",
+    "zod": "4.1.13"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.57.0",
+    "@testing-library/jest-dom": "6.9.1",
+    "@testing-library/react": "16.3.0",
+    "@testing-library/user-event": "14.6.1",
+    "@types/better-sqlite3": "7.6.13",
+    "@types/node": "24.10.1",
+    "@types/react": "18.3.27",
+    "@types/react-dom": "18.3.7",
+    "@vitejs/plugin-react": "5.1.1",
+    "eslint": "8.57.1",
+    "eslint-config-next": "15.5.15",
+    "jsdom": "27.2.0",
+    "pdf-lib": "1.17.1",
+    "typescript": "5.9.3",
+    "vitest": "4.0.15"
+  },
+  "overrides": {
+    "postcss": "8.5.14",
+    "tar": "7.5.15"
+  }
+}
