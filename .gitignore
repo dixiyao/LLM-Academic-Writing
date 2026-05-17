@@ -3,3 +3,5 @@ key.txt
 /AIReviewer/.next-dev
 /AIReviewer/data/debug-uploads
 /AIReviewer/data
+AIReviewer/results.json
+AIReviewer/review_results_gemini.json

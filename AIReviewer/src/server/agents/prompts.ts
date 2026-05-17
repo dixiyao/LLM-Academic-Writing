@@ -117,6 +117,7 @@ Review policy:
 - For experiment concerns, name the missing comparison, ablation, metric, stress test, dataset type, or reproducibility detail.
 - Keep novelty concerns proportional; do not reject primarily for novelty if correctness, evidence, clarity, and usefulness are strong.
 - Make every weakness actionable enough that the analyzer can turn it into a PDF annotation or general suggestion.
+`;
 }
 
 export function buildMetaReviewerPrompt(args: {
