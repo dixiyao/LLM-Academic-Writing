@@ -81,7 +81,18 @@ export class GeminiProvider implements LLMProvider {
 
 Return only valid JSON. Do not include Markdown fences or explanatory text.`
     });
-    const raw = response.text ?? "";
+    let raw = response.text ?? "";
+    if (!raw) {
+      const finishReason = response.candidates?.[0]?.finishReason;
+      if (finishReason && finishReason !== "STOP" && finishReason !== "FINISH_REASON_UNSPECIFIED") {
+        throw new Error(
+          `Gemini generation stopped early (${finishReason}). The model may have been blocked by safety filters or hit a token limit.`
+        );
+      }
+      // Fallback: concatenate all text parts including thought parts
+      const parts = response.candidates?.[0]?.content?.parts ?? [];
+      raw = parts.map((p: { text?: string }) => p.text ?? "").join("");
+    }
     return {
       raw,
       parsed: parseStructured(raw, request.schema)
@@ -115,13 +126,17 @@ Return only valid JSON. Do not include Markdown fences or explanatory text.`
     }
     parts.push({ text: request.userPrompt });
 
+    // Google Search grounding is incompatible with responseSchema (controlled generation).
+    // When search is enabled, rely on prompt instructions for JSON formatting instead.
+    const useStructuredOutput = request.jsonSchema && !request.searchEnabled;
+
     return this.ai.models.generateContent({
       model: this.model,
       contents: [{ role: "user", parts }],
       config: {
         systemInstruction: request.systemPrompt,
-        responseMimeType: request.jsonSchema ? "application/json" : undefined,
-        responseSchema: request.jsonSchema,
+        responseMimeType: useStructuredOutput ? "application/json" : undefined,
+        responseSchema: useStructuredOutput ? request.jsonSchema : undefined,
         tools: request.searchEnabled ? [{ googleSearch: {} }] : undefined
       }
     } as never);
